@@ -1,0 +1,48 @@
+main {
+    direction: column;
+    gap: 20px;
+}
+
+query {
+    width: 520px;
+    height: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+submain {
+    direction: column;
+    gap: 10px;
+}
+
+card {
+    opacity: 0.0;
+
+    direction: column;
+    padding: 10px;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    gap: 5px;
+}
+
+a {
+    font-family: Cascadia Code;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+p {
+    font-family: Corbel;
+    font-size: 12px;
+}
+
+domain {
+    font-family: Cascadia Code;
+    font-size: 9px;
+}
+subheader {
+    font-family: Cascadia Code;
+    color: gainsboro;
+}
