@@ -6,8 +6,9 @@ local descriptions = get("desc", true)
 local domains = get("domain", true)
 
 local visible = false;
-local searchContent, err = pcall(function()
-return SearchBarContent.get()	
+local searchContent = ""
+local status, err = pcall(function()
+searchContent = SearchBarContent.get()	
 end)
 
 if err then
