@@ -37,7 +37,8 @@ if not visible then
         link.set_content(v["title"])
         link.set_href("buss://" .. v["domain"])
         desc.set_content(v["description"])
-    endend
+    end
+	end
 
 if searchContent ~= "" then
  query.set_content(searchContent)
