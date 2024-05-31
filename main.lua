@@ -6,9 +6,10 @@ local descriptions = get("desc", true)
 local domains = get("domain", true)
 
 local visible = false;
-print("SEARCHBAR CONTENT:"..SearchBarContent.get())
-query.on_submit(function(content)
-    if not visible then
+local searchContent = SearchBarContent.get()
+
+function searchWithQuery(content)
+if not visible then
         print("turning shit visible....")
 
         for k,v in pairs(cards) do
@@ -36,7 +37,14 @@ query.on_submit(function(content)
         link.set_content(v["title"])
         link.set_href("buss://" .. v["domain"])
         desc.set_content(v["description"])
-    end
+    endend
+
+if searchContent ~= "" then
+ query.set_content(searchContent)
+searchWithQuery(searchContent)
+end
+query.on_submit(function(query)
+    searchWithQuery(query)
 end)
 
 function percentage(value, min, max)
