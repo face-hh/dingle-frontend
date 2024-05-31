@@ -6,7 +6,7 @@ local descriptions = get("desc", true)
 local domains = get("domain", true)
 
 local visible = false;
-print("hello world!")
+print(SearchBarContent.get())
 query.on_submit(function(content)
     if not visible then
         print("turning shit visible....")
