@@ -6,7 +6,13 @@ local descriptions = get("desc", true)
 local domains = get("domain", true)
 
 local visible = false;
-local searchContent = SearchBarContent.get()
+local searchContent, err = pcall(function()
+searchContent = SearchBarContent.get()	
+end)
+
+if err then
+print("Error occurred while getting SearchBarContent! Most likely an outdated client.",err)
+end
 
 function searchWithQuery(content)
 if not visible then
@@ -40,7 +46,7 @@ if not visible then
     end
 	end
 
-if searchContent ~= "" then
+if searchContent ~= "" and searchContent ~= nil then
  query.set_content(searchContent)
 searchWithQuery(searchContent)
 end
