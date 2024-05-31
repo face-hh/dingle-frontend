@@ -7,7 +7,7 @@ local domains = get("domain", true)
 
 local visible = false;
 local searchContent, err = pcall(function()
-searchContent = SearchBarContent.get()	
+return SearchBarContent.get()	
 end)
 
 if err then
