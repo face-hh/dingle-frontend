@@ -40,10 +40,8 @@ function searchQuery(content)
 end
 
 local status,err = pcall(function()
-    print("TRYING TO DO SOME COOL PARAMETER BULLSHIT")
     local queryParameter = get_parameters()
     if queryParameter.q then
- print("FUCK YEAH!")
     query.set_content(queryParameter.q)
     searchQuery(queryParameter.q)
      end
