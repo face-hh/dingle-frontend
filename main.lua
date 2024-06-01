@@ -11,7 +11,7 @@ query.on_submit(function(content)
     cards_thing()
 
     local res = fetch({
-		url = "http://search.buss.lol/search?q=" .. content,
+		url = "https://search.buss.lol/search?q=" .. content,
 		method = "GET",
 		headers = { ["Content-Type"] = "application/json" },
 	})
@@ -34,7 +34,7 @@ get("luck").on_click(function()
     cards_thing()
 
     local res = fetch({
-		url = "http://search.buss.lol/random",
+		url = "https://search.buss.lol/random",
 		method = "GET",
 		headers = { ["Content-Type"] = "application/json" },
 	})
