@@ -46,3 +46,13 @@ subheader {
     font-family: Cascadia Code;
     color: gainsboro;
 }
+
+subsub {
+    direction: row;
+    gap: 10px;
+}
+
+luck {
+    padding: 11px;
+    background-color: cadetblue;
+}
