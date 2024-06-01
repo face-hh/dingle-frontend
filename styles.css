@@ -1,3 +1,9 @@
+body {
+    background-color: #242424;
+    padding: 10px;
+    border-radius: 12px;
+}
+
 main {
     direction: column;
     gap: 20px;
@@ -46,7 +52,6 @@ subheader {
     font-family: Cascadia Code;
     color: gainsboro;
 }
-
 subsub {
     direction: row;
     gap: 10px;
