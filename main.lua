@@ -7,8 +7,8 @@ local domains = get("domain", true)
 
 local visible = false;
 
-query.on_submit(function(content)
-    if not visible then
+function searchQuery(content)
+ if not visible then
         print("turning shit visible....")
 
         for k,v in pairs(cards) do
@@ -37,6 +37,10 @@ query.on_submit(function(content)
         link.set_href("buss://" .. v["domain"])
         desc.set_content(v["description"])
     end
+end
+
+query.on_submit(function(query)
+   searchQuery(query)
 end)
 
 function percentage(value, min, max)
