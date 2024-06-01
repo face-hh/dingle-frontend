@@ -39,6 +39,14 @@ function searchQuery(content)
     end
 end
 
+local status,err = pcall(function()
+    local queryParameter = get_parameters()
+    if queryParameter.q then
+    query.set_content(queryParameter.q)
+    searchQuery(queryParameter.q)
+     end
+end)
+
 query.on_submit(function(query)
    searchQuery(query)
 end)
